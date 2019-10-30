@@ -2,7 +2,7 @@ FROM python:3
 
 RUN git clone https://github.com/EnzoPonce/Sudoku.git
 
-WORKDIR /Sudoku
+WORKDIR /Sudoku.git
 
 RUN pip install -r requirements.txt
 
