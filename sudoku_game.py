@@ -12,18 +12,14 @@ class Sudoku():
                     self.tablero_original.append((i, j))
 
     def validar(self, fila, columna, numero):
-        #verifica si se repite algun numero en alguna fila
-        for elemento in self.table[fila]:
-            if elemento == numero:
-                return False
-            else:
-                return True
-        #verifica si se repite algun numero en la columna
-        for elemento in range(9):
-            if self.table[elemento][columna] == numero:
-                return False
-            else:
-                True
+        #verifica si se repite algun numero en alguna fila o columna
+        
+            for elemento in range(9):
+                if self.table[fila][elemento] == numero:
+                    return False
+                if self.table[elemento][columna] == numero:
+                        return False
+            return True
         
         #verifica si se repite algun numero en alguna zona
 

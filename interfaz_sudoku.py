@@ -5,13 +5,11 @@ class interfaz():
 
     def validar(self, fila, columna, numero):
         try:
-            if int(fila) > 0 and int(fila) < 9:
-                return True
-            if int(columna) > 0 and int(columna) < 9:
-                return True
-            if numero != "x":
-                if int(numero) > 0 and int(columna) < 9:
-                    return True
+            if int(fila) >= 0 and int(fila) < 9:
+                if int(columna) >= 0 and int(columna) < 9:
+                    if numero != "x":
+                        if int(numero) > 0 and int(columna) < 9:
+                            return True
         except:
             return False
 
@@ -52,6 +50,6 @@ class interfaz():
             print(self.PrintTable())
 
 
-x = interfaz()
+#x = interfaz()
 
-x.jugar()
+#x.jugar()

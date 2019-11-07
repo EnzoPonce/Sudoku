@@ -18,7 +18,7 @@ class TestSudoku(unittest.TestCase):
                          ["x", "x", "x", "4", "1", "9", "x", "x", "5"],
                          ["x", "x", "x", "x", "8", "x", "x", "7", "9"]])
 
-        self.assertFalse(sudoku.validar(0, 0, 3))
+        self.assertFalse(sudoku.validar(0, 7, "3"))
     
     def test_sudoku_columna(self):
 
@@ -32,7 +32,7 @@ class TestSudoku(unittest.TestCase):
                          ["x", "3", "x", "4", "1", "9", "x", "x", "5"],
                          ["x", "x", "x", "x", "8", "x", "x", "7", "9"]])
         
-        self.assertFalse(sudoku.validar(0, 1, 3))
+        self.assertFalse(sudoku.validar(1, 1, "3"))
 
     def test_sudoku_matriz(self):
 
